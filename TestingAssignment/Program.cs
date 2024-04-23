@@ -6,14 +6,6 @@ using System.Net.NetworkInformation;
 
 namespace TestingAssignment
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            
-        }
-    }
-
     public interface IDiscountService
     {
         double GetDiscount();
@@ -30,7 +22,7 @@ namespace TestingAssignment
 
         public double CalcPremium(int age, string location)
         {
-            double premium;
+            double premium = 0.0;
 
             if (location == "rural")
 	            if ((age >= 18) && (age <= 30))
@@ -56,6 +48,8 @@ namespace TestingAssignment
 
             return premium;
         }
+
     }
+
 
 }
